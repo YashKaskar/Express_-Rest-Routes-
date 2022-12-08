@@ -51,6 +51,12 @@ app.get('/comments/new', (req, res) => {
     res.render('comments/new')
 })
 
+app.post('/comments',(req, res) => {    
+    const { username, comment } = req.body;
+    comments.push({ username, comment });
+    res.send('It Worked')
+})
+
 app.listen(8080, () => {    
     console.log('Listening on the Port 8080')
 })
