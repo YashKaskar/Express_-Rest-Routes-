@@ -65,8 +65,8 @@ app.post('/comments',(req, res) => {
 
 app.get('/comments/:id', (req, res) => {    
     const { id } = req.params;
-    const comment = comments.find(c => c.id === parseInt(id))
-    res.render('comments/show', {comments})
+    const comment = comments.find(comment => comment.id === parseInt(id))
+    res.render('comments/show', {comment})
 })
 
 app.listen(8080, () => {
