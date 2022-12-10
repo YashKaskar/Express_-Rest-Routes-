@@ -12,31 +12,37 @@ app.set('view engine', 'ejs')
 
 const comments = [
         {
-        username: 'Dolly',
+        id : 1,
+            username: 'Dolly',
         comment: 'Woo i got a new pet'
     },
     
     {
+    id : 2,
         username: 'Molly',
         comment: 'Today is my dogs 1st Birthday'
     },
 
     {
+    id : 3,
         username: 'Colt',
         comment: 'Happy Day for me'
     },
     
     {
+    id : 4,
         username: 'Liam',
         comment: 'Going for the trip'
     },
     
     {
+    id : 5,
         username: 'Olivia',
         comment: 'I backed my first cake'
     },
     
     {
+    id : 6,
         username: 'Noah',
         comment: 'I planned one for tree'
     }
@@ -58,7 +64,7 @@ app.post('/comments',(req, res) => {
 })
 
 app.get('/comments/:id', (req, res) => {    
-    
+
 })
 
 app.listen(8080, () => {
