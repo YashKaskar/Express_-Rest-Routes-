@@ -57,6 +57,10 @@ app.post('/comments',(req, res) => {
     res.redirect('/comments')
 })
 
+app.get('/comments/:id', (req, res) => {    
+    
+})
+
 app.listen(8080, () => {
     console.log('Listening on the Port 8080')
 })
