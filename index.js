@@ -13,32 +13,32 @@ app.set('view engine', 'ejs')
 const comments = [
         {
         id : 1,
-            username: 'Dolly',
+        username: 'Dolly',
         comment: 'Woo i got a new pet'
     },
     
     {
     id : 2,
-        username: 'Molly',
-        comment: 'Today is my dogs 1st Birthday'
+    username: 'Molly',
+    comment: 'Today is my dogs 1st Birthday'
     },
 
     {
     id : 3,
-        username: 'Colt',
-        comment: 'Happy Day for me'
+    username: 'Colt',
+    comment: 'Happy Day for me'
     },
     
     {
     id : 4,
-        username: 'Liam',
-        comment: 'Going for the trip'
+    username: 'Liam',
+    comment: 'Going for the trip'
     },
     
     {
     id : 5,
-        username: 'Olivia',
-        comment: 'I backed my first cake'
+    username: 'Olivia',
+    comment: 'I backed my first cake'
     },
     
     {
@@ -64,7 +64,9 @@ app.post('/comments',(req, res) => {
 })
 
 app.get('/comments/:id', (req, res) => {    
-
+    const { id } = req.params;
+    const comment = comments.find(c => c.id === parseInt(id))
+    res.render('comments/show', {comments})
 })
 
 app.listen(8080, () => {
