@@ -71,9 +71,6 @@ app.get('/comments/:id', (req, res) => {
 })
 
 
-app.patch('/comments/:id', (req, res) => {
-    res.render('It worked and updating');
-})
 
 app.listen(8080, () => {
     console.log('Listening on the Port 8080')
