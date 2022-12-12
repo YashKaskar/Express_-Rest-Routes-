@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const { v4: uuid } = require('uuid');
+const { v4: uuid } = require('uuid'); //for random passing id 
 
 
 app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
@@ -60,7 +60,7 @@ app.get('/comments/new', (req, res) => {
 
 app.post('/comments',(req, res) => {    
     const { username, comment } = req.body;
-    comments.push({ username, comment, id:uuid() });
+    comments.push({ username, comment, id:uuid() }); // this is just the example real data come from database
     res.redirect('/comments')
 })
 
