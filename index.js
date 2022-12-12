@@ -70,7 +70,10 @@ app.get('/comments/:id', (req, res) => {
     res.render('comments/show', {comment})
 })
 
-
+app.get('/comments/:id/edit', (req, res) => {   
+    const comment = comments.find(comment => comment.id === id)
+    res.render('comments/edit', (comment))
+})
 
 app.listen(8080, () => {
     console.log('Listening on the Port 8080')
